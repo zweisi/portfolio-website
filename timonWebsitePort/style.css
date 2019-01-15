@@ -238,13 +238,23 @@ section {
     height: 40px;
     line-height: 40px;
     text-align: center;
-    background: red;
+    background: #eae7dc;
     display: none;
+    border-top-right-radius: 20px;
+    -webkit-border-top-right-radius: 20px;
+    -moz-border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-bottom-left-radius: 20px
 
 }
 
 .scrollToTop:hover {
-    background: blue;
+    background:#A1917C;
+}
+
+.scrollToTop .fa {
+    color: #1b1e25;
 }
 
 .wrapper {
