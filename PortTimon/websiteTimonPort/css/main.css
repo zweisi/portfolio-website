@@ -46,7 +46,7 @@ section {
 
 #secTwo .designContainer .textDesignContainer {
   width: 50%;
-  margin-top: 20%;
+  margin-top: 10%;
   margin-left: 15%;
   position: relative;
   color: #000;
@@ -236,7 +236,9 @@ section {
 
 .sidebar ul li a:hover {
   background: #3D414C;
-  color: #CBBA9C;
+  color: red;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
 }
 
 .btn {
@@ -711,12 +713,15 @@ header.major.last {
   /* top: 0; */
 }
 
+.skill-container li.html {
+  margin-top: 0;
+}
+
 .skill-container li {
   position: relative;
   list-style: none;
   margin: 50px 0;
   font-weight: 500;
-  text-transform: uppercase;
 }
 
 .skill-container li:before {
@@ -984,9 +989,127 @@ li.ng:after {
   .footer-distributed .footer-center i {
     margin-left: 0;
   }
+  #secOne .btn-design {
+    bottom: 0;
+    margin-left: 0;
+    top: auto;
+  }
+  .btn-dev {
+    bottom: 0;
+    right: 0;
+    top: auto;
+  }
 }
 
 /*----------------------- end footer------------------------------------*/
+/*----------------------logo page ------------------------------*/
+#logoPage .sidebar, #logopage .sidebar ul {
+  top: 0;
+}
+
+#logoPage .sidebar ul li a {
+  text-align: center;
+}
+
+.promo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [image-start] 1fr [image-end];
+      grid-template-columns: [image-start] 1fr [image-end];
+      grid-template-areas: '....' 'headline' 'text' '....';
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+.promo__image {
+  grid-area: image;
+  z-index: 0;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  -o-object-fit: cover;
+     object-fit: cover;
+  mix-blend-mode: overlay;
+}
+
+.promo__headline {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: headline;
+  z-index: 1;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.promo__text {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: text;
+  z-index: 1;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .promos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .promos {
+    width: 80vw;
+    margin: auto;
+  }
+  .promo {
+    background-color: transparent;
+    color: black;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: '........ image' 'headline image' 'text     image' 'button   image' '........ image';
+    grid-column-gap: 20px;
+    text-align: left;
+  }
+  .promo.even {
+        grid-template-areas: 'image ....' 'image headline' 'image text' 'image button'  'image ....';
+  }
+  .promo__image {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+.promos p {
+  line-height: 1.4em;
+  margin-bottom: .75em;
+}
+
+.promos img {
+  max-width: 100%;
+}
+
+.promo {
+  margin: 2rem auto;
+}
+
+.promo__headline {
+  font-size: 2rem;
+  margin-bottom: .5em;
+}
+
+.promo__button {
+  color: tomato;
+  font-size: 1.5rem;
+}
+
 @media screen and (max-width: 1680px) {
   /* Basic */
   body, input, select, textarea {
@@ -1031,6 +1154,15 @@ li.ng:after {
   /* Basic */
   body, input, select, textarea {
     font-size: 12pt;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .skill-container {
+    text-align: center;
+  }
+  .skill-container h2, .skill-container h3, .skill-container p {
+    text-align: center;
   }
 }
 
