@@ -10,24 +10,26 @@
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
 
-
     <title>Document</title>
 </head>
 
 <body>
+        
     <section id="secOne">
-
+            
         <img src="images/imgTimon.png" alt="#">
-
+        
         <div class="designSite">
             <div class="textDesign">
                 <h1>Design</h1>
                 <p> Web-designer with a passion for beautifull designs</p>
             </div>
             <div class="reset"></div>
+           
             <div class="btn-design">
-                <a href="./pages/design.html">Go to design portfolio</a>
+                <a href="./pages/design.html" class="animsition-link">Go to design portfolio</a>
             </div>
+        
         </div>
 
         <div class="devSite">
@@ -36,10 +38,13 @@
                 <p class="data">Front end developer with a passion to learn new things</p>
             </div>
             <div class="btn-dev">
-                <a href="./pages/design.html">Go to code portfolio</a>
+                <a href="./pages/design.html" class="animsition-link" >Go to code portfolio</a>
             </div>
+        
         </div>
+ 
     </section>
+
     <script type="text/javascript">
 
         const text = baffle(".data");
@@ -50,6 +55,7 @@
         text.start();
         text.reveal(8500);
     </script>
+  
 </body>
 
 </html>
