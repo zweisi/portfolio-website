@@ -1,5 +1,5 @@
 @import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
-@import url('https://fonts.googleapis.com/css?family=Monoton|VT323|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Monoton|VT323|Montserrat|Luckiest+Guy');
 
 
 html {
@@ -31,6 +31,111 @@ section {
     box-sizing: border-box;
 }
 
+#myVideo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.59);
+}
+
+[class*="overlay"] {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    display: block;
+    top: 0;
+    left: 0;
+    -webkit-transition: background-color 1s ease;
+    -moz-transition: background-color 1s ease;
+    transition: background-color 1s ease;
+}
+
+article.wrapperfull {
+    position: absolute;
+    top: 200px !important;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 5;
+    width: 100%;
+}
+
+article h2 {
+    color: #fff;
+    font-size: calc(12px + 6vw)
+}
+
+ h2 strong {
+    color: red;
+}
+
+.arrowDown {
+	position:absolute;
+	top: 92%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	span {
+	display: block;
+	width: 25px;
+	height: 25px;
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
+	transform: rotate(45deg);
+	margin: -10px;
+	animation: arrow 2s infinite;
+    }
+}
+
+.arrowDown span:nth-child(1) {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    border: none;
+    margin-left: -72px;
+    width: 150px;
+    animation-delay: -0.1s;
+}
+
+.arrowDown span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrowDown span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes arrow {
+	0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#secThree {
+    background:none;
+    background-size: cover;
+
+img {
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 60%;
+    max-width: 100%;
+}
+}
 #secTwo {
         background:url(../images/bg.jpg);
         background-size: cover;
@@ -79,13 +184,15 @@ section {
             width: 85%;
 
             h1 {
-                font-size: 4.5vw;
-                font-family: 'Monoton', cursive;
+                font-size: 5.5vw;
+                font-family: 'Luckiest Guy', cursive;
                 text-align: left;
+                margin-bottom: 0;
             }
             p {
                 font-size: 2.5vw;
                 text-align: left;
+                color: #6e6e6e;
             }
         }
         }
@@ -119,7 +226,7 @@ section {
 
     h1 {
         font-size: 4.5vw;
-        font-family: 'Monoton', cursive;
+        font-family: 'Luckiest Guy', cursive;
     }
     p {
         font-size: 2.5vw;
@@ -240,6 +347,11 @@ section {
     transition: 1.2s;
    }
 
+   .sidebar.side a.ion-code-working.animsition-link {
+    border-bottom: 2px solid white;
+    }
+
+
    .btn {
     left: 25px;
     padding: 0 10px;
@@ -251,6 +363,7 @@ section {
     cursor: pointer;
     position: fixed;
     z-index: 10;
+    top: 0;
    }
    
    .btn:before {
@@ -641,7 +754,48 @@ section {
                     border-top: solid 1px rgba(224, 224, 224, 0.75);
                     display: inline-block;
                 }
+
+                #codePage {
+                    background: #000;
+                }
     
+
+                #codePage header.major {
+                    background: #000;
+
+                    h2, h3 {
+                        color: #fff;
+                    }
+                }
+
+                #codePage section.skill-section {
+                    background: #000;
+                }
+
+                #codePage .content h1, #codePage .content h2, #codePage .content h3 {
+                    color: #fff;
+                }
+                #codePage .feature.left, #codePage .feature.right {
+                    background: #000;
+                }
+
+                #codePage .feature .content{
+                    background: #000;
+                }
+
+                #codePage .feature .content h3 {
+                    color: #fff;
+                }
+
+                #codePage .skill-container h3, #codePage .skill-container h2 {
+                    color: #fff;
+                }
+
+                #codePage .box.alt{
+                    background: #000;
+                }
+
+
                 header.major.last {
                     border-bottom: 0;
                     margin-bottom: 0;
@@ -809,9 +963,9 @@ section {
                 }
                 
                 .footer-distributed h3 span{
-                    color:  #5383d3;
+                    color:  #fff;
                 }
-                
+
                 /* Footer links */
                 
                 .footer-distributed .footer-links{
@@ -873,8 +1027,16 @@ section {
                 }
                 
                 .footer-distributed .footer-center p a{
-                    color:  #5383d3;
+                    color:  #fff;
                     text-decoration: none;;
+
+                    &:hover {
+                        color: red;
+                    }
+                }
+
+                .footer-distributed .footer-center i:hover {
+                    background: red;
                 }
                 
                 
