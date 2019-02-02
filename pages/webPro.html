@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="icon" href="../images/icon1.png">
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../dist/css/animsition.min.css">
+    <title>web prototypes</title>
+</head>
+
+<body id="logoPage">
+    <div class="animsition">
+        <div class="sidebar">
+
+            <ul>
+                <li><a class="ion-home" href="../index.html" title="Home page"> </a></li>
+                <li><a class="fas fa-pencil-alt" href="design.html" title="Design page"></a></li>
+                <li><a class="ion-code-working animsition-link" href="code.html" title="Code page"></a></li>
+                <li><a class="fab fa-github" href="https://github.com/zweisi" title="Go to github"></a></li>
+                <li><a class="ion-social-linkedin" href="https://www.linkedin.com/in/timon-zweistra-314371100/html/"
+                        title="go to Linkedin"> </a></li>
+                <li><a class="ion-ios-email" href="mailto:timonzweistra@hotmail.com" title="Email adres"></a></li>
+            </ul>
+        </div>
+        <a class="btn"></a>
+
+        <main class="promos">
+
+
+
+            <div class="promo">
+                <h3 class="promo__headline">Prototype website</h3>
+
+                <p class="promo__text"> protype website </p>
+
+
+                <img class="promo__image" src="../images/index-mockup.png"
+                    alt="web">
+
+            </div>
+
+            <div class="promo even">
+                <h3 class="promo__headline">Prototype </h3>
+
+                <p class="promo__text">landings page prototype </p>
+
+
+                <img class="promo__image" src="../images/landingpage.png"
+                    alt="Logo La Viegan">
+
+            </div>
+
+            <div class="promo">
+                <h3 class="promo__headline">Prototype </h3>
+
+                <p class="promo__text">Website for buisness clients</p>
+
+
+                <img class="promo__image" src="../images/webproc.png"
+                    alt="Ocean Scape">
+
+            </div>
+
+
+
+        </main>
+
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+
+                <a class="logoImgg"><img src="../images/logo1.png" alt="" /></a>
+
+                <p class="footer-company-name">Timon Zweistra  &copy; 2019</p>
+
+
+            </div>
+
+            <div class="footer-center">
+
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Oegstgeest, Nederland</span></p>
+                </div>
+
+
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:timonzweistra@hotmail.com">timonzweistra@hotmail.com</a></p>
+                </div>
+
+                <div>
+                    <i class="fa fa-download"></i>
+                    <p><a href="../timon cv 2018-min.pdf" download="timon cv 2018-min">Download CV pdf</a></p>
+                </div>
+
+            </div>
+
+            <div class="footer-right">
+
+                <p class="footer-company-about">
+                    <span>Portfolio from Timon Zweistra</span>
+                </p>
+    
+                <div class="footer-icons">
+    
+                    <a href="https://www.linkedin.com/in/timon-zweistra-314371100/html/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/zweisi"><i class="fab fa-github"></i></a>
+    
+                </div>
+    
+            </div>
+
+        </footer>
+    </div>
+    <script type="text/javascript">
+        $('.btn').on("click", function () {
+            $('.btn').toggleClass('btnc');
+            $('.sidebar').toggleClass('side');
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".animsition").animsition({
+                inClass: 'fade-in-down',
+                outClass: 'fade-out-down',
+                inDuration: 1500,
+                outDuration: 800,
+                linkElement: '.animsition-link',
+                // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+                loading: true,
+                loadingParentElement: 'body', //animsition wrapper element
+                loadingClass: 'animsition-loading',
+                loadingInner: '', // e.g '<img src="loading.svg" />'
+                timeout: false,
+                timeoutCountdown: 5000,
+                onLoadEvent: true,
+                browser: ['animation-duration', '-webkit-animation-duration'],
+                // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+                // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+                overlay: false,
+                overlayClass: 'animsition-overlay-slide',
+                overlayParentElement: 'body',
+                transition: function (url) { window.location.href = url; }
+            });
+        });
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- animsition.js -->
+    <script src="../dist/js/animsition.min.js"></script>
+
+
+</body>
+
+</html>
